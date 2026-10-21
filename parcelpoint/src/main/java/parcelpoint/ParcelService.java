@@ -16,7 +16,7 @@ public class ParcelService {
     }
 
     public List<Locker> getLockers() {
-        return lockers;
+        return new ArrayList<>(lockers);
     }
 
     public int getFreeLockerCount() {
