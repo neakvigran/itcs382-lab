@@ -78,6 +78,7 @@ public class ParcelService {
                 writer.write(parcel.getCode() + "," + parcel.status + "\n");
             }
         } catch (IOException e) {
+            System.err.println("Error saving parcels: " + e.getMessage());
         }
     }
 }
