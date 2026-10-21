@@ -19,6 +19,16 @@ public class ParcelService {
         return lockers;
     }
 
+    public int getFreeLockerCount() {
+        int count = 0;
+        for (Locker locker : lockers) {
+            if (locker.isFree()) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public Locker storeParcel(Parcel parcel) {
         for (Locker locker : lockers) {
             if (locker.isFree() && locker.getSize() >= parcel.getSize()) {
